@@ -1,0 +1,36 @@
+//
+//  SYCHeader.pch
+//  微博项目
+//
+//  Created by sycjyy on 15/10/16.
+//  Copyright (c) 2015年 sycjyy. All rights reserved.
+//
+
+
+#ifdef __OBJC__
+
+#import "UIView+Frame.h"
+#import "UIImage+Image.h"
+#import <UIKit/UIKit.h>
+
+#define SYCKeyWindow [UIApplication sharedApplication].keyWindow
+
+// ...表示宏定义的可变参数
+// __VA_ARGS__:表示函数里面的可变参数
+#ifdef DEBUG // 调试
+
+#define Log(...) NSLog(__VA_ARGS__)
+
+#else // 发布
+
+#define Log(...)
+
+#endif
+#define SYCStatusCellMargin 10
+#define SYCNameFont [UIFont systemFontOfSize:13]
+#define SYCTimeFont [UIFont systemFontOfSize:12]
+#define SYCSourceFont SYCTimeFont
+#define SYCTextFont [UIFont systemFontOfSize:15]
+#define SYCScreenW [UIScreen mainScreen].bounds.size.width
+
+#endif
